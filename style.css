@@ -1,0 +1,130 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+}
+body{
+    font-family: nunito, sans-serif;
+    background-color:#ddd;
+}
+.title{
+    font-weight:800;
+}
+.dark_light_parent{
+    display:flex;
+    align-items:center;
+}
+
+header{
+    position:fixed;
+    left:0px;
+    right:0px;
+    top:0px;
+    z-index:1000;
+    background-color:white;
+    padding:14px 24px;
+    box-shadow:0px 1px 4px 1px rgba(0,0,0,0.5);
+}
+.header-content{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    max-width:1280px;
+    margin-inline:auto;
+}
+.dark_light_parent{
+    cursor:pointer;
+    display:flex;
+    gap:8px;
+}
+.search_filter_Parent{
+    display:flex;
+    max-width:1280px;
+    margin-inline:auto;
+    justify-content:space-between;
+    margin-top:88px;
+    gap:30px;
+}
+
+.search_parent{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    background-color:white;
+    padding:0px 16px;
+    width:100%;
+    max-width:320px;
+    box-shadow:0px 0px 4px 1px rgba(0,0,0,0.1)
+}
+.search_parent img{
+    width:20px;
+    height:20px;
+    cursor:pointer;
+}
+.search_parent input {
+    font-size: 14px;
+    height:100%;
+    width:100%;
+    border:none;
+    outline:none;
+}
+
+.filter_parent{
+    /* padding:10px 8px;        */
+    background-color:white;
+    /* position:relative; */
+    box-shadow:1px 1px 2px 0px rgba(0,0,0,0.3)
+}
+.filter_parent label{
+    display:inline-block;
+    padding:10px 8px;  
+}
+#region-search {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: black;
+  min-width:100px;
+  height:100%;
+  outline:none;
+}
+main{
+    padding-inline:24px;
+}
+
+.countries-container{
+    margin-top:40px;
+    max-width:1280px;
+    margin-inline:auto;
+    display:grid;
+    gap:64px; 
+    justify-items:center;
+    grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+}
+.country-card{
+    width:250px;
+    /* max-width:100%; */
+    border-radius:8px;
+    overflow:hidden;
+    box-shadow:1px 1px 4px rgba(0,0,0,0.2);
+    transition:all 0.3s ease-in-out;
+}
+.country-card:hover{
+    cursor:pointer;
+    transform:scale(1.05);
+    box-shadow:1px 1px 12px 4px rgba(0,0,0,0.4);
+}
+.country-card img{
+    width:100%;
+    height:170px;  
+}
+.country-data{
+    padding:12px 20px 28px;
+}
+
+.country-data h3{
+    margin-bottom:12px;
+}
+.country-data > p{
+    margin-bottom:8px;
+}
