@@ -1,6 +1,7 @@
 import allCountryData from "./allCountriesData.js";
 const countriesContainer = document.querySelector(".countries-container");
 const regionSearch = document.querySelector("#region-search");
+const searchCountry = document.querySelector('.searchCountry')
 
 allCountryData.forEach((countrydata) => {
   createCountryCard(countrydata);
@@ -32,3 +33,11 @@ async function fetchCountry(region) {
     createCountryCard(countrydata);
   });
 }
+
+searchCountry.addEventListener('input',(e)=>{
+  countriesContainer.innerHTML = "";
+  let search = allCountryData.filter((Country)=>Country.name.toLowerCase().slice(0,searchCountry.value.length).includes(e.target.value))
+  search.forEach((countrydata) => {
+  createCountryCard(countrydata);
+});
+})
