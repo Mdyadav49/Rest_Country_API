@@ -15,7 +15,6 @@ This project is a responsive web application that displays detailed information 
 
 ![Country Info App Preview](https://i.imgur.com/YF8VvBl.png)
 
-> 🔁 You can update the preview image with a screenshot of your own project UI.
 
 ---
 
