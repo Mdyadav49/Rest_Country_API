@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en">    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rest Country API</title>
+    <title>REST Country </title>
     <link href="https://fonts.googleapis.com/css?family=Nunito:300,regular,500,600,700,800,900" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" type="module"></script>
+    <script src="index.js" type="module"></script>
 </head>
 <body>
     <header>
         <div class="header-content">
-            <h3 class="title">where in the world?</h3>
+            <a  href="index.html" class="title">where in the world?</a>  
             <div class="dark_light_parent">
-                <i class="fa-regular fa-moon"></i>
-                <p>Dark Mode</p>
+                <i class="fa-regular fa-moon" id="dark_light_icon"></i>
+                <p><span id="iconmessage">Dark</span> Mode</p>
             </div>
         </div>
     </header>
@@ -23,24 +23,23 @@
 <main>
     <div class="search_filter_Parent">
         <div class="search_parent">
-            <img src="images/searchIcon.svg" alt="searchIcon">
-            <input type="text" placeholder="Search for a country...">
+            <img src="images/searchIcon.svg" alt="searchIcon" class="searchIcon">
+            <input type="text" placeholder="Search for a country..." class="searchCountry">
         </div>
         <div class="filter_parent">
-            <label for="region-search">Filter by region </label>
+            <!-- <label for="region-search">Filter by region </label> -->
             <select id="region-search">
-                <option value="" disabled selected hidden></option>
+                <option value="" disabled selected hidden>Filter by region</option>
                 <option value="Africa">Africa</option>
                 <option value="America">America</option>
                 <option value="Asia">Asia</option>
                 <option value="Europe">Europe</option>
                 <option value="Oceania">Oceania</option>
-            </select>
+           </select>
         </div>
     </div>
-
-    <div class="countries-container"></div>
+    <div class="countries-container">
+    </div>
 </main>
 </body>
 </html>
-
