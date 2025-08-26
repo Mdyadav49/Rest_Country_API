@@ -3,6 +3,7 @@
     padding:0px;
     box-sizing:border-box;
 }
+
 main{
     padding-top:100px;
 }
@@ -17,6 +18,7 @@ main{
     box-shadow: 0 0 4px 0px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     cursor: pointer;
+    background-color:#ffffff30;
 }
 
 .country-details {
@@ -54,6 +56,11 @@ main{
     box-shadow: 0 0 4px 0px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     font-size: 14px;
+    text-decoration:none;
+    color:black;
+    cursor:pointer;
+    background-color: #ffffff30;
+    color:white;
 }
 
 @media(max-width: 940px) {
