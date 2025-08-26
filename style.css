@@ -3,16 +3,26 @@
     padding:0px;
     box-sizing:border-box;
 }
+
 body{
+    --background-color:white;
+    --text-color: black;
+    --element-color: white;
     font-family: nunito, sans-serif;
-    background-color:#ddd;
+    background-color:var(--background-color);
+    color:var(--text-color);
+}
+body.dark{
+    --background-color:hsl(207,26%,17%);
+    --text-color: white;
+    --element-color: hsl(209,23%,22%);
 }
 .title{
+    color:var(--text-color);
+    text-decoration:none;
     font-weight:800;
-}
-.dark_light_parent{
-    display:flex;
-    align-items:center;
+    cursor:pointer;
+    font-size:20px;
 }
 
 header{
@@ -21,8 +31,6 @@ header{
     right:0px;
     top:0px;
     z-index:1000;
-    background-color:white;
-    padding:14px 24px;
     box-shadow:0px 1px 4px 1px rgba(0,0,0,0.5);
 }
 .header-content{
@@ -30,7 +38,9 @@ header{
     justify-content:space-between;
     align-items:center;
     max-width:1280px;
+    padding:14px 24px;
     margin-inline:auto;
+    background-color:var(--element-color);
 }
 .dark_light_parent{
     cursor:pointer;
@@ -50,11 +60,12 @@ header{
     display:flex;
     align-items:center;
     gap:20px;
-    background-color:white;
     padding:0px 16px;
     width:100%;
     max-width:320px;
-    box-shadow:0px 0px 4px 1px rgba(0,0,0,0.1)
+    box-shadow:0px 0px 4px 1px rgba(0,0,0,0.1);
+    background-color:var(--element-color);
+    color:var(--text-color);
 }
 .search_parent img{
     width:20px;
@@ -67,24 +78,25 @@ header{
     width:100%;
     border:none;
     outline:none;
+    background-color:inherit;
+    color:inherit;
 }
 
 .filter_parent{
-    background-color:white;
     box-shadow:1px 1px 2px 0px rgba(0,0,0,0.3)
 }
-.filter_parent label{
-    display:inline-block;
-    padding:10px 8px;  
-}
+
 #region-search {
-  background: none;
+  /* background: none; */
   border: none;
   cursor: pointer;
   color: black;
-  min-width:100px;
   height:100%;
+  min-width:140px;
+  padding:10px 4px;  
   outline:none;
+  background-color:var(--element-color);
+  color:var(--text-color);
 }
 main{
     padding-inline:24px;
@@ -100,15 +112,18 @@ main{
     grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
 }
 .country-card{
+    display:block;
+    text-decoration: none;
+    color: inherit;  
     width:250px;
-    /* max-width:100%; */
     border-radius:8px;
     overflow:hidden;
     box-shadow:1px 1px 4px rgba(0,0,0,0.2);
     transition:all 0.3s ease-in-out;
+    background-color:var(--element-color)
+    color:
 }
 .country-card:hover{
-    cursor:pointer;
     transform:scale(1.05);
     box-shadow:1px 1px 12px 4px rgba(0,0,0,0.4);
 }
